@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="176">
+  <meta name="description" content="No-JavaScript access and verification instructions for Project Scaffold 0.1.0-alpha.1.">
+  <title>Project Scaffold 0.1.0-alpha.1 - Archivo 21 Compatibility Edition</title>
+  <link rel="canonical" href="https://web.archivo21.org/scaffold/releases/0.1.0-alpha.1">
+  <link rel="stylesheet" href="/style.css" type="text/css">
+  <script type="text/javascript" src="/assets/reload-compiler.js"></script>
+</head>
+<body class="theme-operations" bgcolor="#22282b" text="#15191a" link="#174d8c" vlink="#65418c" background="/tiles/operations.gif">
+<a name="top"></a>
+<div id="page">
+  <div id="mast">
+    <div id="status">WEB.A21 // SCAFFOLD RELEASE // HTML // NO JS</div>
+    <p id="wordmark"><a href="/">ARCHIVO 21</a><br><small>COMPATIBILITY EDITION</small></p>
+    <p id="softkeys"><a href="/" accesskey="0">[0] Home</a> &middot; <a href="/documents/institutional" accesskey="1">[1] Institution</a> &middot; <a href="/projects" accesskey="2">[2] Projects</a> &middot; <a href="/documents" accesskey="3">[3] Documents</a> &middot; <a href="/research" accesskey="4">[4] Research</a> &middot; <a href="/about" accesskey="5">[5] About</a> &middot; <a href="/provenance" accesskey="6">[6] Provenance</a> &middot; <a href="/rights" accesskey="7">[7] Rights</a> &middot; <a href="/contact" accesskey="8">[8] Contact</a> &middot; <a href="/index" accesskey="9">[9] Index</a></p>
+  </div>
+  <div id="crumbs"><a href="/">Home</a> &gt; <a href="/scaffold">Scaffold</a> &gt; 0.1.0-alpha.1</div>
+  <div id="main">
+    <h1>Project Scaffold 0.1.0-alpha.1</h1>
+    <p><strong>Public alpha approved:</strong> 29 July 2026 &#183; <code>Y&#178;K</code></p>
+    <p><strong>Exact ZIP filename:</strong><br><code>archivo21-project-scaffold-0.1.0-alpha.1.zip</code></p>
+    <p><strong>Expected size:</strong> 50,169 bytes</p>
+    <p><strong>SHA-256:</strong><br><code>f34eb9aae666bbd5f961c602f6e7c882a628931d9935dee9ba355c8002f60bc8</code></p>
+
+    <h2>Easy download on a modern browser</h2>
+    <p><a href="https://archivo21.org/scaffold/releases/0.1.0-alpha.1/download/">Open the verified main-site downloader</a>. It reconstructs the same frozen archive and checks the SHA-256 before download.</p>
+
+    <h2>No-JavaScript reconstruction</h2>
+    <p>The exact ZIP is stored as ten Base64 text segments. Download the following files in this order:</p>
+    <ol>
+      <li><a href="https://archivo21.org/scaffold/releases/0.1.0-alpha.1/data/zip.part01.b64">zip.part01.b64</a></li>
+      <li><a href="https://archivo21.org/scaffold/releases/0.1.0-alpha.1/data/zip.part02.b64">zip.part02.b64</a></li>
+      <li><a href="https://archivo21.org/scaffold/releases/0.1.0-alpha.1/data/zip.part03.b64">zip.part03.b64</a></li>
+      <li><a href="https://archivo21.org/scaffold/releases/0.1.0-alpha.1/data/zip.part04.b64">zip.part04.b64</a></li>
+      <li><a href="https://archivo21.org/scaffold/releases/0.1.0-alpha.1/data/zip.part05.b64">zip.part05.b64</a></li>
+      <li><a href="https://archivo21.org/scaffold/releases/0.1.0-alpha.1/data/zip.part06.b64">zip.part06.b64</a></li>
+      <li><a href="https://archivo21.org/scaffold/releases/0.1.0-alpha.1/data/zip.part06b.b64">zip.part06b.b64</a></li>
+      <li><a href="https://archivo21.org/scaffold/releases/0.1.0-alpha.1/data/zip.part07.b64">zip.part07.b64</a></li>
+      <li><a href="https://archivo21.org/scaffold/releases/0.1.0-alpha.1/data/zip.part07b.b64">zip.part07b.b64</a></li>
+      <li><a href="https://archivo21.org/scaffold/releases/0.1.0-alpha.1/data/zip.part08.b64">zip.part08.b64</a></li>
+    </ol>
+
+    <h3>Unix, Linux or macOS</h3>
+    <pre>cat zip.part01.b64 zip.part02.b64 zip.part03.b64 zip.part04.b64 zip.part05.b64 zip.part06.b64 zip.part06b.b64 zip.part07.b64 zip.part07b.b64 zip.part08.b64 | tr -d '\r\n' | base64 -d &gt; archivo21-project-scaffold-0.1.0-alpha.1.zip
+sha256sum archivo21-project-scaffold-0.1.0-alpha.1.zip</pre>
+
+    <h3>Windows PowerShell</h3>
+    <pre>$parts = 'zip.part01.b64','zip.part02.b64','zip.part03.b64','zip.part04.b64','zip.part05.b64','zip.part06.b64','zip.part06b.b64','zip.part07.b64','zip.part07b.b64','zip.part08.b64'
+$b64 = (($parts | ForEach-Object { Get-Content $_ -Raw }) -join '') -replace '\s',''
+[IO.File]::WriteAllBytes('archivo21-project-scaffold-0.1.0-alpha.1.zip',[Convert]::FromBase64String($b64))
+Get-FileHash 'archivo21-project-scaffold-0.1.0-alpha.1.zip' -Algorithm SHA256</pre>
+
+    <h2>Verification rule</h2>
+    <p>Use the archive only if its SHA-256 exactly matches the value above. A different digest means the reconstruction is incomplete or altered.</p>
+
+    <h2>Historical state</h2>
+    <p>This is the exact inspected package. Its internal wording that it was assembled as a private development alpha remains frozen as part of the historical object. The public release record documents its later approval as the first public alpha.</p>
+
+    <p><a href="https://archivo21.org/scaffold/releases/0.1.0-alpha.1/RECONSTRUCT.md">Main-site plain-text reconstruction record</a></p>
+    <p><a href="#top">^ Top</a></p>
+  </div>
+  <div id="foot">
+    <p><a href="/scaffold">Scaffold</a> &middot; <a href="/scaffold/process">Creation process</a> &middot; <a href="https://archivo21.org/scaffold/releases/0.1.0-alpha.1/">Main release record</a></p>
+    <p class="stamp">NO JS REQUIRED / EXACT BYTES / SHA-256</p>
+    <p class="stamp">NO ANALYTICS. NO ADVERTISING. NO DATA MINING.</p>
+  </div>
+</div>
+</body>
+</html>
