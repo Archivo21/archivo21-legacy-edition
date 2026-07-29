@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://web.archivo21.org/sitemap.xml

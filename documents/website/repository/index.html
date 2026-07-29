@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="176">
+  <meta name="description" content="Source repository for the Archivo 21 institutional website at archivo21.org and archivo21.github.io. Purpose This repository is the public front door and r">
+  <title>archivo21.github.io - Archivo 21 Compatibility Edition</title>
+  <link rel="canonical" href="https://web.archivo21.org/documents/website/repository">
+  <link rel="stylesheet" href="/style.css" type="text/css">
+  <script type="text/javascript" src="/assets/reload-compiler.js"></script>
+</head>
+<body class="theme-operations" bgcolor="#22282b" text="#15191a" link="#174d8c" vlink="#65418c" background="/tiles/operations.gif">
+<a name="top"></a>
+<div id="page">
+  <div id="mast">
+    <div id="status">WEB.A21 // OPERATIONS // HTML // NO JS</div>
+    <p id="wordmark"><a href="/">ARCHIVO 21</a><br><small>COMPATIBILITY EDITION</small></p>
+    <p id="softkeys"><a href="/" accesskey="0">[0] Home</a> &middot; <a href="/documents/institutional" accesskey="1">[1] Institution</a> &middot; <a href="/projects" accesskey="2">[2] Projects</a> &middot; <a href="/documents" accesskey="3">[3] Documents</a> &middot; <a href="/research" accesskey="4">[4] Research</a> &middot; <a href="/about" accesskey="5">[5] About</a> &middot; <a href="/provenance" accesskey="6">[6] Provenance</a> &middot; <a href="/rights" accesskey="7">[7] Rights</a> &middot; <a href="/contact" accesskey="8">[8] Contact</a> &middot; <a href="/index" accesskey="9">[9] Index</a></p>
+  </div>
+  <div id="crumbs"><a href="/" accesskey="0">Home</a> &gt; <a href="/documents">Documents</a> &gt; <a href="/documents/website">Website records</a></div>
+  <div id="main">
+    <h1>archivo21.github.io</h1>
+    <p>Source repository for the Archivo 21 institutional website at <strong>archivo21.org</strong> and <strong>archivo21.github.io</strong>.</p>
+<h2 id="purpose">Purpose</h2>
+<p>This repository is the public front door and reading layer for Archivo 21. It presents the institution first&#8212;its constitution, governance, standards, policies, continuity and documentary history&#8212;then introduces its projects and research.</p>
+<p>The first active project is <a href="/documents/projects/anhqv-ts2">ANHQV &#215; The Sims 2 Preservation Project</a>. Its project repository remains canonical until it receives a dedicated public website of its own.</p>
+<h2 id="structure">Structure</h2>
+<pre><code>.
+&#9500;&#9472;&#9472; index.html                 # institutional landing page
+&#9500;&#9472;&#9472; about/                     # purpose and research principles
+&#9500;&#9472;&#9472; documents/                 # rendered institutional, project and website records
+&#9500;&#9472;&#9472; projects/                  # project directory and ANHQV-TS2 overview
+&#9500;&#9472;&#9472; research/                  # curated experiment routes
+&#9500;&#9472;&#9472; contribute/                # participation and recruitment
+&#9500;&#9472;&#9472; provenance/                # founding and attribution summary
+&#9500;&#9472;&#9472; rights/                    # licensing and third-party material
+&#9500;&#9472;&#9472; contact/                   # institutional contact routes
+&#9500;&#9472;&#9472; www/                       # hidden, noindex Archie Easter egg
+&#9500;&#9472;&#9472; assets/                    # CSS, JavaScript, icons and image policy
+&#9500;&#9472;&#9472; docs/                      # deployment, migration and review notes
+&#9492;&#9472;&#9472; .github/                   # issue forms and pull-request template</code></pre>
+<h2 id="publish">Publish</h2>
+<p>The deployed site has no runtime build step or external dependency. Generated document pages are committed as static HTML.</p>
+<p>Maintainers may regenerate those pages locally with <code>tools/build_document_pages.py</code>, Pandoc and Python's <code>lxml</code> package.</p>
+<ol type="1">
+<li>Create the public repository <code>Archivo21/archivo21.github.io</code>.</li>
+<li>Add these files at the repository root.</li>
+<li>In <strong>Settings &#8594; Pages</strong>, select <strong>Deploy from a branch</strong>, <code>main</code>, <code>/(root)</code>.</li>
+<li>In the Pages settings, save <code>archivo21.org</code> as the custom domain.</li>
+<li>Configure the corresponding Cloudflare DNS records and then enforce HTTPS after GitHub makes it available.</li>
+</ol>
+<p>The included <code>CNAME</code> file contains <code>archivo21.org</code>. Remove it before the first commit if the custom domain is not ready.</p>
+<p>See <a href="/documents/website/operations/deployment"><code>docs/DEPLOYMENT.md</code></a> for the complete checklist. Change records use the decorative-only or full tier defined in <a href="/documents/website/operations/change-documentation-policy"><code>docs/CHANGE-DOCUMENTATION-POLICY.md</code></a>; both tiers require a recoverable pre-change checkpoint retained for at least 28 days.</p>
+<p>The <code>www</code> Easter egg requires one Cloudflare hostname redirect after the files are live. See <a href="/documents/website/operations/www-easter-egg"><code>docs/WWW-EASTER-EGG.md</code></a>.</p>
+<h2 id="contact-activation">Contact activation</h2>
+<p>Institutional addresses are present in <code>assets/js/config.js</code> but are hidden while:</p>
+<div><pre><code><span>contactRoutingActive<span>:</span> <span>false</span></span></code></pre></div>
+<p>After all three Cloudflare routes have been tested, change the value to <code>true</code> and review <code>/contact/</code>, <code>/rights/</code>, <code>NOTICE.md</code>, <code>SECURITY.md</code>, and any Code of Conduct contact text before publishing.</p>
+<h2 id="canonical-records-and-publication">Canonical records and publication</h2>
+<p>Institution-wide Markdown is canonical in <code>Archivo21/institutional-records</code>. ANHQV-TS2 Markdown is canonical in its project repository. This website renders readable publication copies and links readers through a document centre without becoming a duplicate authority.</p>
+<p>The obsolete first-site reference snapshots have been removed from the current tree; Git history preserves them. See <a href="/documents/website/operations/migration-map"><code>docs/MIGRATION-MAP.md</code></a>.</p>
+<h2 id="licence">Licence</h2>
+<p>Original website text and structures are licensed under CC BY-SA 4.0 unless a file states otherwise. Third-party material is excluded. See <a href="/rights/notice"><code>NOTICE.md</code></a>.</p>
+
+    <p><a href="#top">^ Top</a></p>
+  </div>
+  <div id="foot">
+    <p><a href="https://archivo21.org/documents/website/repository/">Main-site edition</a> &middot; <a href="/compatibility">Compatibility notes</a> &middot; <a href="/status">Build status</a> &middot; <a href="/index">A-Z index</a></p>
+    <p class="stamp">TEXT FIRST / TINY TILES / NO TRACKING / NO SCRIPT DEPENDENCY</p>
+    <p class="stamp">NO ANALYTICS. NO ADVERTISING. NO DATA MINING.</p>
+  </div>
+</div>
+</body>
+</html>

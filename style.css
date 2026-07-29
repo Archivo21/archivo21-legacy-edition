@@ -1,0 +1,292 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #18140d;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.48;
+}
+
+#page {
+  width: 92%;
+  max-width: 760px;
+  margin: 12px auto;
+  background: #f5eedb;
+  border: 2px solid #b88620;
+}
+
+#mast {
+  color: #f7e6b2;
+  background: #0d0b08;
+  border-bottom: 4px solid #c89523;
+}
+
+#status {
+  padding: 3px 8px;
+  color: #0d0b08;
+  background: #c89523;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#wordmark {
+  margin: 0;
+  padding: 11px 10px 9px 10px;
+  font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+#wordmark a {
+  color: #f7e6b2;
+  text-decoration: none;
+}
+
+#wordmark small {
+  color: #d9b85f;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+#softkeys {
+  margin: 0;
+  padding: 7px 8px;
+  color: #eee4c8;
+  background: #262016;
+  border-bottom: 1px solid #8d6a20;
+  font-size: 11px;
+}
+
+#softkeys a {
+  color: #ffe08b;
+  white-space: nowrap;
+}
+
+#crumbs {
+  padding: 7px 10px 0 10px;
+  color: #61563e;
+  font-size: 11px;
+}
+
+#main {
+  padding: 8px 14px 14px 14px;
+  word-wrap: normal;
+  overflow-wrap: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #241b0d;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.18;
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: auto;
+}
+
+h1 {
+  margin: 8px 0 12px 0;
+  padding-bottom: 6px;
+  border-bottom: 3px double #a77718;
+  font-size: 24px;
+}
+
+h2 {
+  margin-top: 22px;
+  padding: 3px 5px;
+  background: #e8d49f;
+  border-left: 5px solid #9a6e13;
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 15px;
+}
+
+a {
+  color: #174d8c;
+}
+
+a:visited {
+  color: #65418c;
+}
+
+a:hover, a:focus {
+  color: #8c2d18;
+  background: #fff2ad;
+}
+
+blockquote {
+  margin: 12px 10px;
+  padding: 7px 10px;
+  color: #302817;
+  background: #eee3c6;
+  border-left: 4px solid #b48622;
+}
+
+pre, code, tt {
+  font-family: "Courier New", Courier, monospace;
+}
+
+code, tt, .stamp {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+pre {
+  padding: 8px;
+  overflow: auto;
+  color: #e8dfc7;
+  background: #19150f;
+  border: 1px solid #6e5622;
+}
+
+hr {
+  height: 1px;
+  color: #a9802e;
+  background: #a9802e;
+  border: 0;
+}
+
+table {
+  width: 100%;
+  margin: 10px 0;
+  color: #17130c;
+  background: #fffaf0;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+th {
+  color: #f8ebc8;
+  background: #33291b;
+}
+
+th, td {
+  padding: 4px;
+  border: 1px solid #8d7547;
+  vertical-align: top;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow: auto;
+}
+
+.link-card {
+  margin: 8px 0;
+  padding: 7px 9px;
+  background: #efe3c4;
+  border: 1px solid #b69348;
+}
+
+.link-card p {
+  margin: 4px 0;
+}
+
+#foot {
+  padding: 8px 10px;
+  color: #e9dec2;
+  background: #241e15;
+  border-top: 3px solid #b88620;
+  font-size: 11px;
+}
+
+#foot a {
+  color: #ffe08b;
+}
+
+.stamp {
+  color: #b9ab89;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 10px;
+}
+
+.theme-project h2 {
+  background: #c8dde1;
+  border-left-color: #497985;
+}
+
+.theme-research h2 {
+  background: #c8dec8;
+  border-left-color: #3d7448;
+}
+
+.theme-rights h2 {
+  background: #e4c7bf;
+  border-left-color: #823f35;
+}
+
+.theme-community h2 {
+  background: #d8cfe5;
+  border-left-color: #5d477d;
+}
+
+.theme-archive h2 {
+  background: #ded8c8;
+  border-left-color: #6f644b;
+}
+
+.theme-www h2 {
+  background: #c7e1e0;
+  border-left-color: #287a78;
+}
+
+@media handheld, screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  #page {
+    width: 100%;
+    margin: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  #main {
+    padding: 7px 8px 12px 8px;
+  }
+
+  #wordmark {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  #softkeys a {
+    display: inline-block;
+    margin: 2px 4px 2px 0;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+}
+
+@media print {
+  body {
+    color: #000;
+    background: #fff;
+  }
+
+  #page {
+    width: auto;
+    max-width: none;
+    margin: 0;
+    border: 0;
+  }
+
+  #softkeys, #status, #foot {
+    display: none;
+  }
+}

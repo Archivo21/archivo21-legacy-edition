@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="176">
+  <meta name="description" content="Intended routing https://archivo21.org/ remains the institutional homepage. https://www.archivo21.org/ opens the hidden Archie homepage stored at /www/. /w">
+  <title>`www` Easter Egg - Archivo 21 Compatibility Edition</title>
+  <link rel="canonical" href="https://web.archivo21.org/documents/website/operations/www-easter-egg">
+  <link rel="stylesheet" href="/style.css" type="text/css">
+  <script type="text/javascript" src="/assets/reload-compiler.js"></script>
+</head>
+<body class="theme-operations" bgcolor="#22282b" text="#15191a" link="#174d8c" vlink="#65418c" background="/tiles/operations.gif">
+<a name="top"></a>
+<div id="page">
+  <div id="mast">
+    <div id="status">WEB.A21 // OPERATIONS // HTML // NO JS</div>
+    <p id="wordmark"><a href="/">ARCHIVO 21</a><br><small>COMPATIBILITY EDITION</small></p>
+    <p id="softkeys"><a href="/" accesskey="0">[0] Home</a> &middot; <a href="/documents/institutional" accesskey="1">[1] Institution</a> &middot; <a href="/projects" accesskey="2">[2] Projects</a> &middot; <a href="/documents" accesskey="3">[3] Documents</a> &middot; <a href="/research" accesskey="4">[4] Research</a> &middot; <a href="/about" accesskey="5">[5] About</a> &middot; <a href="/provenance" accesskey="6">[6] Provenance</a> &middot; <a href="/rights" accesskey="7">[7] Rights</a> &middot; <a href="/contact" accesskey="8">[8] Contact</a> &middot; <a href="/index" accesskey="9">[9] Index</a></p>
+  </div>
+  <div id="crumbs"><a href="/" accesskey="0">Home</a> &gt; <a href="/documents">Documents</a> &gt; <a href="/documents/website">Website records</a></div>
+  <div id="main">
+    <h1>`www` Easter Egg</h1>
+    <h2 id="intended-routing">Intended routing</h2>
+<ul>
+<li><code>https://archivo21.org/</code> remains the institutional homepage.</li>
+<li><code>https://www.archivo21.org/</code> opens the hidden Archie homepage stored at <code>/www/</code>.</li>
+<li><code>/www/</code> is deliberately excluded from the sitemap and carries <code>noindex, nofollow</code>.</li>
+</ul>
+<h2 id="why-an-edge-redirect-is-required">Why an edge redirect is required</h2>
+<p>The GitHub Pages custom domain is <code>archivo21.org</code>. When both the apex and <code>www</code> DNS records point to the same Pages site, GitHub automatically redirects the non-canonical hostname to the configured custom domain before the website's JavaScript runs.</p>
+<p>The root page includes a hostname check as a fallback, but the reliable route is a Cloudflare Single Redirect that intercepts <code>www</code> first.</p>
+<h2 id="cloudflare-rule">Cloudflare rule</h2>
+<p>The <code>www</code> DNS record must exist and be <strong>Proxied</strong>.</p>
+<p>Create a Single Redirect with:</p>
+<ul>
+<li><p><strong>Rule name:</strong> <code>Archivo 21 www Easter egg</code></p></li>
+<li><p><strong>When incoming requests match:</strong> custom filter expression</p></li>
+<li><p><strong>Expression:</strong></p>
+<pre><code>(http.host eq "www.archivo21.org" and http.request.uri.path eq "/")</code></pre></li>
+<li><p><strong>Then:</strong> static URL redirect</p></li>
+<li><p><strong>Target URL:</strong> <code>https://archivo21.org/www/</code></p></li>
+<li><p><strong>Status code:</strong> <code>302</code></p></li>
+<li><p><strong>Preserve query string:</strong> enabled</p></li>
+</ul>
+<p>Use <code>302</code> while the Easter egg is provisional. It avoids browsers permanently caching the destination during testing.</p>
+<h2 id="checks-after-deployment">Checks after deployment</h2>
+<ol type="1">
+<li>Open <code>https://archivo21.org/</code> in a private window: the institutional homepage should load.</li>
+<li>Open <code>https://www.archivo21.org/</code> in a private window: the Archie page should load at <code>https://archivo21.org/www/</code>.</li>
+<li>Confirm the sound remains off until <strong>TURN THE NOISE ON</strong> is pressed.</li>
+<li>Keyboard-tab through all fourteen linked objects and confirm each receives a visible dotted focus outline.</li>
+<li>Open <code>/www/</code> on a portrait phone: Archie should remain central, all fourteen objects should remain fully tappable inside the tall stage, and the noise control should be reachable without rotating the device.</li>
+</ol>
+<h2 id="smartphone-layout">Smartphone layout</h2>
+<p>Portrait displays up to 700 CSS pixels wide use a separate tall composition rather than squeezing the desktop scatter horizontally. The same fourteen links retain deliberately mismatched sizes and animation styles, but are distributed through seven staggered rows around Archie. Every link keeps a minimum 48 &#215; 48 CSS-pixel tap target; the noise control keeps a minimum 44-pixel height.</p>
+<p>Landscape phones and larger displays retain the original wide composition. Reduced-motion preferences continue to disable the movement in either layout.</p>
+<h2 id="references">References</h2>
+<ul>
+<li>GitHub Pages custom-domain redirects: <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site</a></li>
+<li>Cloudflare Single Redirect settings: <a href="https://developers.cloudflare.com/rules/url-forwarding/single-redirects/settings/">https://developers.cloudflare.com/rules/url-forwarding/single-redirects/settings/</a></li>
+<li>Cloudflare proxy status: <a href="https://developers.cloudflare.com/dns/proxy-status/">https://developers.cloudflare.com/dns/proxy-status/</a></li>
+</ul>
+
+    <p><a href="#top">^ Top</a></p>
+  </div>
+  <div id="foot">
+    <p><a href="https://archivo21.org/documents/website/operations/www-easter-egg/">Main-site edition</a> &middot; <a href="/compatibility">Compatibility notes</a> &middot; <a href="/status">Build status</a> &middot; <a href="/index">A-Z index</a></p>
+    <p class="stamp">TEXT FIRST / TINY TILES / NO TRACKING / NO SCRIPT DEPENDENCY</p>
+    <p class="stamp">NO ANALYTICS. NO ADVERTISING. NO DATA MINING.</p>
+  </div>
+</div>
+</body>
+</html>

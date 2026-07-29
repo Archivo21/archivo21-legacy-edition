@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="176">
+  <meta name="description" content="Document class: Website operational procedure Lifecycle status: Active Version: 2.0 Last reviewed: 2026-07-28 Current deployment The public repository and">
+  <title>Deployment — archivo21.github.io - Archivo 21 Compatibility Edition</title>
+  <link rel="canonical" href="https://web.archivo21.org/documents/website/operations/deployment">
+  <link rel="stylesheet" href="/style.css" type="text/css">
+  <script type="text/javascript" src="/assets/reload-compiler.js"></script>
+</head>
+<body class="theme-operations" bgcolor="#22282b" text="#15191a" link="#174d8c" vlink="#65418c" background="/tiles/operations.gif">
+<a name="top"></a>
+<div id="page">
+  <div id="mast">
+    <div id="status">WEB.A21 // OPERATIONS // HTML // NO JS</div>
+    <p id="wordmark"><a href="/">ARCHIVO 21</a><br><small>COMPATIBILITY EDITION</small></p>
+    <p id="softkeys"><a href="/" accesskey="0">[0] Home</a> &middot; <a href="/documents/institutional" accesskey="1">[1] Institution</a> &middot; <a href="/projects" accesskey="2">[2] Projects</a> &middot; <a href="/documents" accesskey="3">[3] Documents</a> &middot; <a href="/research" accesskey="4">[4] Research</a> &middot; <a href="/about" accesskey="5">[5] About</a> &middot; <a href="/provenance" accesskey="6">[6] Provenance</a> &middot; <a href="/rights" accesskey="7">[7] Rights</a> &middot; <a href="/contact" accesskey="8">[8] Contact</a> &middot; <a href="/index" accesskey="9">[9] Index</a></p>
+  </div>
+  <div id="crumbs"><a href="/" accesskey="0">Home</a> &gt; <a href="/documents">Documents</a> &gt; <a href="/documents/website">Website records</a></div>
+  <div id="main">
+    <h1>Deployment — archivo21.github.io</h1>
+    <p><strong>Document class:</strong> Website operational procedure</p>
+<p><strong>Lifecycle status:</strong> Active</p>
+<p><strong>Version:</strong> 2.0</p>
+<p><strong>Last reviewed:</strong> 2026-07-28</p>
+<h2 id="current-deployment">Current deployment</h2>
+<p>The public repository and GitHub Pages deployment already exist. The site publishes from <code>main</code> at the repository root and uses <code>archivo21.org</code> as its custom domain.</p>
+<p>Before a publication commit:</p>
+<ul>
+<li><span><span>[ ]</span>Regenerate document pages from the reviewed institutional and project candidates.</span></li>
+<li><span><span>[ ]</span>Review <code>docs/MIGRATION-MAP.md</code> and the publication manifest.</span></li>
+<li><span><span>[ ]</span>Confirm <code>.gitignore</code>, <code>.gitattributes</code>, <code>.github/</code>, and <code>.nojekyll</code> are present.</span></li>
+<li><span><span>[ ]</span>Confirm <code>CNAME</code> still contains only <code>archivo21.org</code>.</span></li>
+<li><span><span>[ ]</span>Keep <code>contactRoutingActive: false</code> until every email alias has been tested.</span></li>
+<li><span><span>[ ]</span>Record the exact live baseline and preserve a recoverable checkpoint for at least 28 days.</span></li>
+</ul>
+<h2 id="github-pages">GitHub Pages</h2>
+<p>This repository is designed to publish directly from the default branch without a build workflow.</p>
+<ol type="1">
+<li>Publish the reviewed candidate to <code>main</code> by normal non-forced fast-forward.</li>
+<li>Open <strong>Settings &#8594; Pages</strong>.</li>
+<li>Under <strong>Build and deployment</strong>, choose <strong>Deploy from a branch</strong>.</li>
+<li>Select <code>main</code> and <code>/(root)</code>.</li>
+<li>Save.</li>
+</ol>
+<h2 id="custom-domain">Custom domain</h2>
+<ol type="1">
+<li>In <strong>Settings &#8594; Pages</strong>, enter <code>archivo21.org</code> in <strong>Custom domain</strong> and save it.</li>
+<li>Configure the apex-domain records in Cloudflare according to GitHub's current Pages documentation.</li>
+<li>Keep Cloudflare's proxy disabled while GitHub verifies and provisions the domain unless current GitHub/Cloudflare guidance says otherwise.</li>
+<li>Confirm both <code>archivo21.org</code> and <code>www.archivo21.org</code> behave as intended.</li>
+<li>Enable <strong>Enforce HTTPS</strong> when GitHub offers it.</li>
+<li>Confirm <code>CNAME</code> still contains only <code>archivo21.org</code>.</li>
+</ol>
+<p>After the apex domain and certificate are healthy, configure the <code>www</code> Easter egg according to <a href="/documents/website/operations/www-easter-egg"><code>WWW-EASTER-EGG.md</code></a>. The <code>www</code> DNS record must be proxied for Cloudflare's redirect rule to run.</p>
+<p>The <code>CNAME</code> file alone does not finish custom-domain configuration; the domain must also be saved in the repository's Pages settings.</p>
+<h2 id="contact-routes">Contact routes</h2>
+<p>Configure and test:</p>
+<ul>
+<li><code>contact@archivo21.org</code> &#8212; general enquiries;</li>
+<li><code>conduct@archivo21.org</code> &#8212; private conduct reports;</li>
+<li><code>rights@archivo21.org</code> &#8212; attribution, permission, provenance and rights enquiries.</li>
+</ul>
+<p>After receiving a successful test through each route:</p>
+<ol type="1">
+<li>change <code>contactRoutingActive</code> to <code>true</code> in <code>assets/js/config.js</code>;</li>
+<li>check <code>/contact/</code> and <code>/rights/</code>;</li>
+<li>update <code>NOTICE.md</code>, <code>SECURITY.md</code>, and any Code of Conduct file if their temporary wording is no longer needed;</li>
+<li>send a second test from an unrelated address.</li>
+</ol>
+<h2 id="github-repository-settings">GitHub repository settings</h2>
+<p>Recommended:</p>
+<ul>
+<li>description: <code>Independent digital preservation, research, and documentation.</code></li>
+<li>website: <code>https://archivo21.org</code></li>
+<li>topics: <code>digital-preservation</code>, <code>research</code>, <code>documentation</code>, <code>fan-studies</code>, <code>game-research</code></li>
+<li>enable issues;</li>
+<li>enable private vulnerability reporting;</li>
+<li>protect <code>main</code> after the first stable deployment;</li>
+<li>require pull-request review when more maintainers join.</li>
+</ul>
+<h2 id="final-checks">Final checks</h2>
+<p>Run <code>python tools/validate_site.py</code> from the repository root. Then review:</p>
+<ul>
+<li>mobile navigation;</li>
+<li>keyboard focus order;</li>
+<li>404 page;</li>
+<li>canonical links;</li>
+<li>only the approved EXP000 Short is publicly embedded;</li>
+<li>all fourteen <code>/www/</code> objects have an accessible link name;</li>
+<li><code>/www/</code> remains silent until its noise control is activated;</li>
+<li>custom-domain HTTPS;</li>
+<li>absence of personal Gmail addresses or credentials;</li>
+<li>whether the website still describes the project state accurately.</li>
+<li>the institution appears before its projects in the homepage and document centre;</li>
+<li>every internal anchor leads to an HTML webpage rather than raw Markdown, licence or notice text;</li>
+<li>the generated source manifest matches the reviewed institutional and project commits.</li>
+</ul>
+
+    <p><a href="#top">^ Top</a></p>
+  </div>
+  <div id="foot">
+    <p><a href="https://archivo21.org/documents/website/operations/deployment/">Main-site edition</a> &middot; <a href="/compatibility">Compatibility notes</a> &middot; <a href="/status">Build status</a> &middot; <a href="/index">A-Z index</a></p>
+    <p class="stamp">TEXT FIRST / TINY TILES / NO TRACKING / NO SCRIPT DEPENDENCY</p>
+    <p class="stamp">NO ANALYTICS. NO ADVERTISING. NO DATA MINING.</p>
+  </div>
+</div>
+</body>
+</html>
