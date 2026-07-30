@@ -4,10 +4,10 @@ The public Legacy Edition is maintained in
 `Archivo21/archivo21-legacy-edition` and deployed by GitHub Pages to
 `web.archivo21.org`.
 
-The 2026-07-30 release imports the independently reviewed pre-visual
+The initial 2026-07-30 release imports the independently reviewed pre-visual
 Compatibility Edition candidate `9c31d8c` into the public GitHub repository.
 It combines that candidate with the two existing GitHub-only Scaffold support
-records and preserves all 240 HTML routes as ordinary static files.
+records and preserved 240 HTML routes as ordinary static files.
 
 The release includes:
 
@@ -28,3 +28,14 @@ The five-refresh Compiler trigger is a progressive JavaScript enhancement. It
 uses tab-local session storage only, with no identifier, cookie, analytics or
 external request. The production origin is GitHub Pages; no ChatGPT Site
 deployment is authoritative.
+
+## Compiler six-page expansion
+
+The later 2026-07-30 Compiler release preserves the current GitHub fixes and
+adds exactly six new regular sectors, `/compiler/07/` through `/compiler/12/`,
+with derived Turbo views. It rewrites the operational sequence as one
+Archivo 21-specific story and raises the public static route count to 252.
+
+The implementation retains ordinary anchors, literal row-by-row box drawing,
+a global seven-character control-cell width, click-only reachability, solid
+special-state backgrounds and the Legacy Edition privacy boundary.
