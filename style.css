@@ -385,7 +385,12 @@ th, td { padding: 4px; border: 1px solid #8d7547; vertical-align: top; }
 
 .logo-screen-page { color: #ff9d42; background: #000; }
 .logo-screen { color: #ff9d42; font-family: "Courier New", Courier, monospace; }
-.logo-screen .logo-kicker { color: #ffb45e; }
+.logo-screen .logo-kicker,
+.logo-screen .logo-footer,
+.logo-screen .logo-footer a,
+.logo-screen .logo-footer a:visited { color: #ff9d42; }
+.logo-screen-page a:hover,
+.logo-screen-page a:focus { color: #000; background: #ff9d42; }
 
 .crt-logo {
   display: inline-block;
@@ -403,7 +408,7 @@ th, td { padding: 4px; border: 1px solid #8d7547; vertical-align: top; }
 
 .crt-scanline { display: block; height: 1em; margin-bottom: 2px; line-height: 1; white-space: pre; }
 .logo-footer { margin: 8px 0 0 0; font-size: 14px; text-align: center; }
-.logo-footer a, .logo-footer a:visited { color: #ffb45e; }
+.logo-footer a, .logo-footer a:visited { color: #ff9d42; }
 
 #foot {
   padding: 8px 10px;
