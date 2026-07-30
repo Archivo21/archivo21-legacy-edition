@@ -559,6 +559,11 @@ th, td {
   white-space: pre;
 }
 
+.crt-logo .favicon-raster {
+  color: inherit;
+  font-size: inherit;
+}
+
 .logo-footer {
   margin: 8px 0 0 0;
   font-size: 14px;
