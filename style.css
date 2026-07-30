@@ -51,11 +51,15 @@ body {
 }
 
 #wordmark a::after {
-  content: " 21";
+  content: none;
 }
 
 .brand-21 {
-  display: none;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin-left: 4px;
+  vertical-align: middle;
 }
 
 #wordmark small {
