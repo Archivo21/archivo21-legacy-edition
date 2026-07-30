@@ -4,6 +4,39 @@
   <url><loc>https://web.archivo21.org/404</loc></url>
   <url><loc>https://web.archivo21.org/about</loc></url>
   <url><loc>https://web.archivo21.org/compatibility</loc></url>
+  <url><loc>https://web.archivo21.org/compiler</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/00</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/00/turbo</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/01</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/01/turbo</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/02</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/02/turbo</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/03</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/03/turbo</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/04</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/04/turbo</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/05</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/05/turbo</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/06</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/06/turbo</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/blue-screen</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/bsod</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/bsod/logo</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/bsod/turbo</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/compile</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/decisions-001-004</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/decisions-005-008</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/f1</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/keyboard-error</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/log</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/original-concept</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/output</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/patch</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/power</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/recovery</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/specification</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/turbo</loc></url>
+  <url><loc>https://web.archivo21.org/compiler/withdrawal-memo</loc></url>
   <url><loc>https://web.archivo21.org/contact</loc></url>
   <url><loc>https://web.archivo21.org/contribute</loc></url>
   <url><loc>https://web.archivo21.org/documents</loc></url>
@@ -202,6 +235,7 @@
   <url><loc>https://web.archivo21.org/rights</loc></url>
   <url><loc>https://web.archivo21.org/rights/licence</loc></url>
   <url><loc>https://web.archivo21.org/rights/notice</loc></url>
+  <url><loc>https://web.archivo21.org/scaffold</loc></url>
   <url><loc>https://web.archivo21.org/status</loc></url>
   <url><loc>https://web.archivo21.org/www</loc></url>
 </urlset>

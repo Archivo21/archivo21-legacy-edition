@@ -1,3 +1,4 @@
+
 html, body {
   margin: 0;
   padding: 0;
@@ -5,7 +6,7 @@ html, body {
 
 body {
   color: #18140d;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-family: "Courier New", Courier, monospace;
   font-size: 13px;
   line-height: 1.48;
 }
@@ -22,6 +23,7 @@ body {
   color: #f7e6b2;
   background: #0d0b08;
   border-bottom: 4px solid #c89523;
+  text-align: center;
 }
 
 #status {
@@ -37,15 +39,23 @@ body {
 #wordmark {
   margin: 0;
   padding: 11px 10px 9px 10px;
-  font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+  font-family: "Courier New", Courier, monospace;
   font-size: 25px;
   font-weight: bold;
+  line-height: 1.25;
   letter-spacing: 3px;
 }
 
 #wordmark a {
   color: #f7e6b2;
   text-decoration: none;
+}
+
+.brand-21 {
+  width: 36px;
+  height: 36px;
+  margin-left: 2px;
+  vertical-align: middle;
 }
 
 #wordmark small {
@@ -62,6 +72,7 @@ body {
   background: #262016;
   border-bottom: 1px solid #8d6a20;
   font-size: 11px;
+  text-align: center;
 }
 
 #softkeys a {
@@ -83,7 +94,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: #241b0d;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Courier New", Courier, monospace;
   line-height: 1.18;
   word-break: normal;
   overflow-wrap: normal;
@@ -190,6 +201,361 @@ th, td {
   margin: 4px 0;
 }
 
+.compiler-nav {
+  padding: 6px 8px;
+  background: #e8d49f;
+  border: 1px solid #9a6e13;
+  text-align: center;
+}
+
+.compiler-nav a {
+  display: inline-block;
+  margin: 2px 3px;
+}
+
+.record-sheet {
+  margin: 12px 0;
+  padding: 10px 12px;
+  background: #fffaf0;
+  border: 1px solid #8d7547;
+}
+
+.record-sheet p {
+  margin: 10px 0;
+}
+
+.response-code {
+  padding: 8px;
+  color: #f8ebc8;
+  background: #33291b;
+  border: 2px solid #b88620;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  text-align: center;
+}
+
+.decision-card {
+  margin: 12px 0;
+  padding: 8px 10px;
+  background: #f3e8c9;
+  border: 1px solid #8d7547;
+}
+
+.decision-card h2 {
+  margin-top: 0;
+}
+
+.success-panel {
+  margin: 12px 0;
+  padding: 10px 12px;
+  background: #e2eed9;
+  border: 3px double #4d7438;
+}
+
+.screen-page {
+  min-height: 100%;
+  color: #eee3c6;
+  background-color: #11100d;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#screen-shell {
+  width: 92%;
+  max-width: 620px;
+  margin: 38px auto;
+}
+
+.compiler-screen {
+  padding: 18px 12px;
+  color: #eee3c6;
+  background: #11100d;
+  border: 2px solid #b88620;
+  text-align: center;
+}
+
+.compiler-screen h1 {
+  margin: 8px 0 12px 0;
+  color: #ffb45e;
+  border: 0;
+  font-family: Courier, "Courier New", monospace;
+  font-size: 20px;
+  letter-spacing: 0;
+}
+
+.compiler-kicker,
+.keyboard-label,
+.logo-kicker {
+  color: #d9803f;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.compiler-keyboard {
+  margin: 15px auto 9px auto;
+  padding: 8px 5px;
+  border-top: 1px solid #73502d;
+  border-bottom: 1px solid #73502d;
+}
+
+.keyboard-label {
+  margin: 3px 0 7px 0;
+  color: #a9b6b3;
+  font-size: 11px;
+}
+
+.compiler-controls {
+  margin: 8px auto;
+  color: #ffe08b;
+  font-family: Courier, "Courier New", monospace;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  white-space: normal;
+}
+
+.compiler-panel {
+  display: inline-block;
+  margin: 4px 8px;
+  vertical-align: top;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.panel-line {
+  display: block;
+  height: 1em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.compiler-button,
+.compiler-special-button {
+  display: inline;
+  padding: 0;
+  color: #ffe08b;
+  background: transparent;
+  border: 0;
+  font-family: Courier, "Courier New", monospace;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.compiler-button:hover,
+.compiler-button:focus,
+.compiler-special-button:hover,
+.compiler-special-button:focus {
+  color: #11100d;
+  background: #ffb45e;
+}
+
+.decoy-button {
+  color: #b6c7ff;
+  background: transparent;
+}
+
+.decoy-button:hover,
+.decoy-button:focus {
+  color: #b6c7ff;
+  background: #00008a;
+}
+
+.a21-window,
+.a21-keyboard,
+.terminal-copy {
+  max-width: 100%;
+  margin: 10px auto;
+  padding: 6px;
+  overflow: auto;
+  color: #eee3c6;
+  background: #11100d;
+  border: 0;
+  font-size: 13px;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.a21-window,
+.a21-keyboard {
+  text-align: center;
+}
+
+.a21-window a,
+.a21-keyboard a,
+.compiler-screen a {
+  color: #ffe08b;
+  font-weight: bold;
+}
+
+.screen-note {
+  margin: 12px 5px 4px 5px;
+  color: #c9ba94;
+  text-align: center;
+}
+
+.blue-screen-page {
+  color: #fff;
+  background: #0000aa;
+}
+
+.blue-screen-page #screen-shell {
+  max-width: 640px;
+  margin-top: 50px;
+}
+
+.bsod {
+  color: #fff;
+  background: #0000aa;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.bsod a,
+.bsod a:visited,
+.bsod code {
+  color: #fff;
+  background: #0000aa;
+}
+
+.bsod a:hover,
+.bsod a:focus {
+  color: #0000aa;
+  background: #fff;
+}
+
+.bsod-heading {
+  text-align: center;
+}
+
+.bsod-heading strong {
+  padding: 1px 8px;
+  color: #0000aa;
+  background: #fff;
+}
+
+.bsod-board {
+  margin: 22px auto 14px auto;
+  padding: 8px 4px;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.blue-screen-page .compiler-special-button {
+  color: #0000aa;
+  background: #fff;
+  border-color: #fff;
+}
+
+.blue-screen-page .compiler-special-button:hover,
+.blue-screen-page .compiler-special-button:focus {
+  color: #fff;
+  background: #0000aa;
+}
+
+.power-screen-page {
+  color: #ff9d42;
+  background: #000;
+}
+
+.power-screen-page #screen-shell,
+.logo-screen-page #screen-shell {
+  width: 100%;
+  max-width: none;
+  height: 100vh;
+  min-height: 320px;
+  margin: 0;
+  display: table;
+  text-align: center;
+}
+
+.power-screen,
+.logo-screen {
+  display: table-cell;
+  padding: 10px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.power-screen {
+  color: #ff9d42;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.power-screen a,
+.power-screen a:visited {
+  color: #ffb45e;
+}
+
+.power-screen .compiler-controls {
+  color: #ff9d42;
+  font-size: 13px;
+}
+
+.power-screen .compiler-panel,
+.power-screen .compiler-button,
+.power-screen .compiler-special-button,
+.power-screen .decoy-button {
+  color: #ff9d42;
+}
+
+.logo-screen-page {
+  color: #ff9d42;
+  background: #000;
+}
+
+.logo-screen {
+  color: #ff9d42;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.logo-screen .logo-kicker {
+  color: #ffb45e;
+}
+
+.crt-logo {
+  display: inline-block;
+  margin: 8px auto;
+  padding: 0;
+  color: #ff9d42;
+  background: transparent;
+  border: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  line-height: 1;
+  text-align: left;
+  white-space: pre;
+}
+
+.crt-scanline {
+  display: block;
+  height: 1em;
+  margin-bottom: 2px;
+  line-height: 1;
+  white-space: pre;
+}
+
+.logo-footer {
+  margin: 8px 0 0 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+.logo-footer a,
+.logo-footer a:visited {
+  color: #ffb45e;
+}
+
 #foot {
   padding: 8px 10px;
   color: #e9dec2;
@@ -264,12 +630,75 @@ th, td {
     margin: 2px 4px 2px 0;
   }
 
+  #screen-shell {
+    width: 96%;
+    margin: 12px auto;
+  }
+
+  .compiler-screen {
+    padding: 8px 3px;
+  }
+
+  .compiler-screen h1 {
+    font-size: 18px;
+  }
+
+  .compiler-controls {
+    font-size: 11px;
+  }
+
+  .compiler-panel {
+    margin: 4px 3px;
+  }
+
+  .a21-window,
+  .a21-keyboard,
+  .terminal-copy {
+    padding: 3px;
+    font-size: 9px;
+  }
+
+  .bsod {
+    font-size: 12px;
+  }
+
+  .power-screen-page #screen-shell,
+  .logo-screen-page #screen-shell {
+    min-height: 240px;
+  }
+
+  .power-screen {
+    font-size: 22px;
+  }
+
+  .power-screen .compiler-controls {
+    font-size: 10px;
+  }
+
+  .crt-logo {
+    font-size: 8px;
+  }
+
+  .logo-footer {
+    font-size: 11px;
+  }
+
   h1 {
     font-size: 20px;
   }
 
   h2 {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .crt-logo {
+    font-size: 5px;
+  }
+
+  .crt-scanline {
+    margin-bottom: 2px;
   }
 }
 

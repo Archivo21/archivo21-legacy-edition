@@ -2,28 +2,29 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="176">
-  <meta name="description" content="How the Archivo 21 compatibility edition supports low-capability devices.">
-  <title>Compatibility notes - Archivo 21 Compatibility Edition</title>
+  <meta name="description" content="Compatibility notes and test results for the Archivo 21 Legacy Edition.">
+  <title>Compatibility Log - Archivo 21 Legacy Edition</title>
   <link rel="canonical" href="https://web.archivo21.org/compatibility">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.gif" type="image/gif">
   <link rel="stylesheet" href="/style.css" type="text/css">
-  <script type="text/javascript" src="/assets/reload-compiler.js"></script>
 </head>
-<body class="theme-operations" bgcolor="#22282b" text="#15191a" link="#174d8c" vlink="#65418c" background="/tiles/operations.gif">
+<body class="theme-operations" bgcolor="#22282b" text="#15191a" link="#174d8c" vlink="#65418c" background="/tiles/galaxy/tile-151.gif">
 <a name="top"></a>
 <div id="page">
   <div id="mast">
-    <div id="status">WEB.A21 // OPERATIONS // HTML // NO JS</div>
-    <p id="wordmark"><a href="/">ARCHIVO 21</a><br><small>COMPATIBILITY EDITION</small></p>
+    <script type="text/javascript" src="/refresh.js"></script>
+    <div id="status">WEB.A21 // OPERATIONS // HTML // NO JS REQUIRED</div>
+    <p id="wordmark"><a href="/"><span>ARCHIVO</span> <img class="brand-21" src="/favicon.gif" width="36" height="36" border="0" alt="21"></a><br><small>LEGACY EDITION</small></p>
     <p id="softkeys"><a href="/" accesskey="0">[0] Home</a> &middot; <a href="/documents/institutional" accesskey="1">[1] Institution</a> &middot; <a href="/projects" accesskey="2">[2] Projects</a> &middot; <a href="/documents" accesskey="3">[3] Documents</a> &middot; <a href="/research" accesskey="4">[4] Research</a> &middot; <a href="/about" accesskey="5">[5] About</a> &middot; <a href="/provenance" accesskey="6">[6] Provenance</a> &middot; <a href="/rights" accesskey="7">[7] Rights</a> &middot; <a href="/contact" accesskey="8">[8] Contact</a> &middot; <a href="/index" accesskey="9">[9] Index</a></p>
   </div>
   <div id="crumbs"><a href="/" accesskey="0">Home</a></div>
   <div id="main">
-    <h1>Compatibility notes</h1>
-    
+    <h1>Compatibility Log</h1>
+
 <p>This edition is designed for the widest practical range of devices that can
 still connect to the modern encrypted web.</p>
 <h2>What it requires</h2>
@@ -33,16 +34,36 @@ still connect to the modern encrypted web.</p>
   <li>HTTPS and UTF-8 support at the network/browser boundary.</li>
 </ul>
 <p>JavaScript, web fonts, cookies, local storage, animation and large images are
-not required. CSS and tiny tiled GIF backgrounds are optional enhancements.
-Disable either and the complete reading order remains available.</p>
+not required. CSS, tiny tiled GIF backgrounds and the five-refresh Compiler
+enhancement are optional. Disable any of them and the complete reading order
+remains available.</p>
 <h2>Deliberate old-web features</h2>
 <ul>
   <li>HTML 4.01 Transitional output;</li>
   <li>numeric access keys from 0 to 9;</li>
   <li>solid body colours with tiny repeating GIF tiles;</li>
   <li>plain links, headings, lists, quotations, code and tables;</li>
-  <li>no client-side routing or script-dependent controls;</li>
-  <li>short global navigation and a complete A-Z index.</li>
+  <li>no client-side routing or script-dependent reading controls;</li>
+  <li>short global navigation and a complete A-Z index; and</li>
+  <li>a link-driven <a href="/compiler">Compiler Desk</a> that demonstrates
+  addressable review without client-side code.</li>
+</ul>
+<h2>Compiler compatibility log</h2>
+<pre>INPUT LINKS........ PASS
+KEYBOARD DETECTION. FAIL (EXPECTED)
+F1 WITHOUT KEYBOARD PASS (SOMEHOW)
+BLUE SCREEN........ SIMULATED
+BROWSER CRASH...... NO
+JAVASCRIPT......... OPTIONAL / NOT REQUIRED
+FIVE REFRESHES..... SAME-TAB WINDOW.NAME / 15 MINUTES
+PRIVATE MATERIAL... 0 ITEMS
+EXTERNAL ACTIONS... 0
+SIDE-EFFECT PORT.... NOT INSTALLED</pre>
+<p><a href="/compiler">Return to the A21 Compiler</a></p>
+<h2>Public boundary records</h2>
+<ul>
+  <li><a href="/compiler/original-concept">Original Compiler Desk concept</a></li>
+  <li><a href="/compiler/withdrawal-memo">Withdrawal memo</a></li>
 </ul>
 <h2>Honest limit</h2>
 <p>Many genuine WAP 1.x handsets cannot negotiate current TLS, DNS or cipher
@@ -52,9 +73,8 @@ approach rather than falsely claiming universal WML handset access.</p>
     <p><a href="#top">^ Top</a></p>
   </div>
   <div id="foot">
-    <p><a href="/compatibility">Compatibility notes</a> &middot; <a href="/status">Build status</a> &middot; <a href="/index">A-Z index</a></p>
+    <p><a href="/compiler">Compiler Desk</a> &middot; <a href="/compatibility">Compatibility Log</a> &middot; <a href="/status">Build status</a> &middot; <a href="/index">A-Z index</a></p>
     <p class="stamp">TEXT FIRST / TINY TILES / NO TRACKING / NO SCRIPT DEPENDENCY</p>
-    <p class="stamp">NO ANALYTICS. NO ADVERTISING. NO DATA MINING.</p>
   </div>
 </div>
 </body>

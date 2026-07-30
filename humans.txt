@@ -1,3 +1,3 @@
-Archivo 21 Compatibility Edition
+Archivo 21 Legacy Edition
 Built for durable, low-dependency reading.
 https://archivo21.org/

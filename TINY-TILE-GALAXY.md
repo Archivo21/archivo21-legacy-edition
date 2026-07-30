@@ -26,14 +26,26 @@ At build time, `scripts/build_tiny_tile_galaxy.py`:
 
 1. copies the static source into `_site`;
 2. discovers every `.html` file;
-3. generates the complete 256-tile bank;
-4. hashes each page path to select a preferred tile;
-5. resolves collisions so every current page is unique while there are no more than 256 pages;
-6. replaces or adds the HTML `body background` attribute;
-7. writes `tiles/galaxy/assignments.tsv` and a build report;
-8. fails the build if files are duplicated, oversized, missing or incorrectly assigned.
+3. generates and verifies the complete bank of 256 unique 8×8 GIFs;
+4. preserves the reviewed source-level assignment on each page;
+5. verifies that ordinary Galaxy assignments are unique;
+6. writes `tiles/galaxy/assignments.tsv` and a build report;
+7. validates all internal targets and every page's click path from `/`;
+8. fails if a tile, route, Scaffold package or Compiler background contract
+   has drifted.
 
-A newly created page therefore receives one of the existing 256 backgrounds automatically during the next deployment. Once the site exceeds 256 HTML pages, deterministic reuse begins and is reported rather than silently pretending uniqueness remains possible.
+New ordinary pages must receive an unused tile in their source HTML. That
+assignment becomes part of the reviewed static record rather than an
+unreviewed deployment-time rewrite.
+
+## Reviewed exceptions
+
+- `/` retains the original `/tiles/home.gif` background.
+- Normal Compiler pages use only the horizontal CRT/terminal scanline family
+  or `/tiles/compiler-a.gif`.
+- Compiler blue-screen states are solid `#0000aa`, without a GIF.
+- The Compiler logo and POWER Easter-egg states are solid black, without a
+  GIF.
 
 ## Loading boundary
 
@@ -41,6 +53,7 @@ The browser does not download all 256 images. It downloads only the one tile ref
 
 ## Source and deployment boundary
 
-The canonical source remains readable and retains its older theme backgrounds. The generated `_site` deployment receives page-specific galaxy tiles. Historical source pages are therefore not rewritten merely to allocate backgrounds.
-
-The GitHub repository currently functions as the canonical static export and deployment candidate. The custom hostname `web.archivo21.org` has also been recorded as pointing to a separate `chatgpt.site` origin. Repository deployment and custom-domain migration must therefore be verified as distinct operations.
+The public GitHub repository is the canonical static Legacy Edition source.
+GitHub Actions validates and copies that exact reviewed source into `_site`,
+then GitHub Pages publishes it at `web.archivo21.org`. No ChatGPT Site origin
+is part of the production path.
