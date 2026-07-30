@@ -257,6 +257,11 @@ th, td { padding: 4px; border: 1px solid #8d7547; vertical-align: top; }
 }
 
 .compiler-controls {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 16px;
   margin: 8px auto;
   color: #ffe08b;
   font-family: Courier, "Courier New", monospace;
@@ -264,12 +269,13 @@ th, td { padding: 4px; border: 1px solid #8d7547; vertical-align: top; }
   font-weight: bold;
   line-height: 1;
   text-align: center;
-  white-space: normal;
+  white-space: nowrap;
 }
 
 .compiler-panel {
-  display: inline-block;
-  margin: 4px 8px;
+  display: block;
+  flex: 0 0 auto;
+  margin: 4px 0;
   vertical-align: top;
   text-align: left;
   white-space: nowrap;
